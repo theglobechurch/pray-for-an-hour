@@ -33,7 +33,7 @@ class _PrayerScreenState extends State<PrayerScreen> {
   }
 
   _countdown() {
-    t = new Timer(Duration(seconds: 5), (){
+    t = new Timer(Duration(seconds: 10), (){
       _timerComplete();
     });
   }
@@ -49,38 +49,37 @@ class _PrayerScreenState extends State<PrayerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Prayer…"),
-          automaticallyImplyLeading: false,
+      appBar: AppBar(
+        title: Text("Prayer…"),
+        automaticallyImplyLeading: false,
+      ),
+      body: Center(
+        child: FutureBuilder<dynamic>(
+          future: loadPrayer(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              maxValue = snapshot.data.prayers.length - 1;
+              return Text(
+                  '${snapshot.data.prayers[_i].name}: ${snapshot.data.prayers[_i].body}');
+            } else {
+              return CircularProgressIndicator();
+            }
+          }
         ),
-        body: Center(
-            child: Column(children: [
-          RaisedButton(
-            
-            onPressed: !_moveOn ? null : () {
-              if (_i >= maxValue) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => EndCardScreen()),
-                );
-              } else {
-                _nextScreen();
-              }
-            },
-            
-            child: Text((_i < maxValue) ? 'Next' : 'End'),
-          ),
-          FutureBuilder<dynamic>(
-              future: loadPrayer(),
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  maxValue = snapshot.data.prayers.length - 1;
-                  return Text(
-                      '${snapshot.data.prayers[_i].name}: ${snapshot.data.prayers[_i].body}');
-                } else {
-                  return CircularProgressIndicator();
-                }
-              })
-        ])));
+      ),
+      floatingActionButton: _moveOn ? FloatingActionButton(
+        onPressed: !_moveOn ? null : () {
+          if (_i >= maxValue) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => EndCardScreen()),
+            );
+          } else {
+            _nextScreen();
+          }
+        },
+        child: new Icon(Icons.navigate_next)
+      ) : null
+    );
   }
 }
