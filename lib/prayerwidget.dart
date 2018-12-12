@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
-
-import 'endcardwidget.dart';
+import 'package:hello_world/services/prayer_services.dart';
+import 'package:hello_world/endcardwidget.dart';
 
 class PrayerScreen extends StatefulWidget {
   @override
@@ -10,27 +9,13 @@ class PrayerScreen extends StatefulWidget {
 
 class _PrayerScreenState extends State<PrayerScreen> {
   int _i = 0;
-  final maxValue = 11;
-  Map<String, dynamic> prayerData;
-
-  @override
-  void initState() {
-    fetchPrayerData();
-  }
-
-  fetchPrayerData() async {
-    String data = await DefaultAssetBundle.of(context).loadString("assets/data/default.json");
-    setState(() {
-      prayerData = json.decode(data);
-    });
-  }
+  int maxValue = null;
 
   // Go to the next screen
   void _nextScreen() {
     setState(() {
       if (_i < maxValue) {
         _i++;
-        print(_i);
       }
     });
   }
@@ -58,13 +43,20 @@ class _PrayerScreenState extends State<PrayerScreen> {
               },
             child: Text('End'),
             ),
-            Text(
-              '$prayerData[$_i]'
+            FutureBuilder<dynamic>(
+              future: loadPrayer(),
+              builder: (context, snapshot) {
+                if(snapshot.hasData) {
+                  maxValue = snapshot.data.prayers.length - 1;
+                  return Text('${snapshot.data.prayers[_i].name}: ${snapshot.data.prayers[_i].body}');
+                } else {
+                  return CircularProgressIndicator();
+                }
+              }
             )
           ]
         )
       )
     );
   }
-
 }
