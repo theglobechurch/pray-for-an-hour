@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pray_for_an_hour/services/prayer_services.dart';
-import 'package:pray_for_an_hour/endcardwidget.dart';
+import 'package:pray_for_an_hour/endcard_widget.dart';
 
 class PrayerScreen extends StatefulWidget {
   @override

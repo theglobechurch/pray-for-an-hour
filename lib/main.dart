@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'prayerwidget.dart';
+import 'package:pray_for_an_hour/prayer_widget.dart';
 
 void main() => runApp(MyApp());
 
