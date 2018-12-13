@@ -19,7 +19,11 @@ class _PrayerScreenState extends State<PrayerScreen> {
   void initState() {
     super.initState();
     _prayerData = loadPrayer();
-    _countdown();
+
+    _prayerData.then((dynamic result) {
+      maxValue = result.prayers.length - 1;
+      _countdown();
+    });
   }
 
   // Go to the next screen
@@ -28,10 +32,8 @@ class _PrayerScreenState extends State<PrayerScreen> {
       setState(() {
         _i++;
         _moveOn = false;
+        _countdown();
       });
-      
-      // Restart the timer
-      _countdown();
     }
   }
 
@@ -52,11 +54,6 @@ class _PrayerScreenState extends State<PrayerScreen> {
       future: _prayerData,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-
-          // This should not be here…
-          // and where this goes the first call to _countdown() belongs
-          maxValue = snapshot.data.prayers.length - 1;
-
           return Scaffold(
             appBar: AppBar(
               title: Text(snapshot.data.prayers[_i].name),
