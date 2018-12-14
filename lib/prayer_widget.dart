@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:pray_for_an_hour/services/prayer_services.dart';
 import 'package:pray_for_an_hour/endcard_widget.dart';
+import 'package:pray_for_an_hour/colours.dart';
 
 class PrayerScreen extends StatefulWidget {
   @override
@@ -50,38 +51,89 @@ class _PrayerScreenState extends State<PrayerScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    Widget title = FutureBuilder<dynamic>(
+      future: _prayerData,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return Container(
+            child: Container (
+              child: Text(
+                snapshot.data.prayers[_i].name,
+                style: TextStyle(
+                  fontSize: 32.0,
+                  fontWeight: FontWeight.w800,
+                  color: kSurface,
+                ),
+              ),
+              color: kPrimaryBlue,
+              padding: EdgeInsets.fromLTRB(16.0, 2.0, 8.0, 2.0),
+            ),
+            padding: EdgeInsets.only(top: 16.0),
+            alignment: Alignment(-1, 0),
+          );
+        }
+      }
+    );
+
+    Widget body = FutureBuilder<dynamic>(
+      future: _prayerData,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return Container(
+            child: Text(
+              snapshot.data.prayers[_i].body
+            ),
+            padding: EdgeInsets.all(16.0),
+          );
+        }
+      }
+    );
+
+    Widget btnAdvance = FloatingActionButton(
+      onPressed: !_moveOn ? null : () {
+        if (_i >= maxValue) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => EndCardScreen()),
+          );
+        } else {
+          _nextScreen();
+        }
+      },
+      child: new Icon(Icons.navigate_next)
+    );
+
+    Widget loadedBody = Container(
+      child: Container (
+        child: Column(
+          children:[
+            title,
+            body
+          ]
+        ),
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: kPrimaryBlue,
+            width: 16.0,
+          ),
+        ),
+        alignment: Alignment(0, 0),
+      ),
+      padding: EdgeInsets.all(32.0),
+      alignment: Alignment(0, 0),
+    );
+
     return FutureBuilder<dynamic>(
       future: _prayerData,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           return Scaffold(
-            appBar: AppBar(
-              title: Text(snapshot.data.prayers[_i].name),
-              automaticallyImplyLeading: false,
-            ),
-            body: Center(
-              child: Text(snapshot.data.prayers[_i].body),
-            ),
-            floatingActionButton: _moveOn ? FloatingActionButton(
-              onPressed: !_moveOn ? null : () {
-                if (_i >= maxValue) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => EndCardScreen()),
-                  );
-                } else {
-                  _nextScreen();
-                }
-              },
-              child: new Icon(Icons.navigate_next)
-            ) : null
+            body: loadedBody,
+            floatingActionButton: _moveOn ? btnAdvance : null
           );
         } else {
           return Scaffold(
-            appBar: AppBar(
-              title: Text("Loading…"),
-              automaticallyImplyLeading: false,
-            ),
             body: Center(
               child: CircularProgressIndicator(),
             ),
@@ -89,39 +141,5 @@ class _PrayerScreenState extends State<PrayerScreen> {
         }
       }
     );
-
-    // return Scaffold(
-    //   appBar: AppBar(
-    //     title: Text("Prayer…"),
-    //     automaticallyImplyLeading: false,
-    //   ),
-    //   body: Center(
-    //     child: FutureBuilder<dynamic>(
-    //       future: _prayerData,
-    //       builder: (context, snapshot) {
-    //         if (snapshot.hasData) {
-    //           maxValue = snapshot.data.prayers.length - 1;
-    //           return Text(
-    //               '${snapshot.data.prayers[_i].name}: ${snapshot.data.prayers[_i].body}');
-    //         } else {
-    //           return CircularProgressIndicator();
-    //         }
-    //       }
-    //     ),
-    //   ),
-    //   floatingActionButton: _moveOn ? FloatingActionButton(
-    //     onPressed: !_moveOn ? null : () {
-    //       if (_i >= maxValue) {
-    //         Navigator.push(
-    //           context,
-    //           MaterialPageRoute(builder: (context) => EndCardScreen()),
-    //         );
-    //       } else {
-    //         _nextScreen();
-    //       }
-    //     },
-    //     child: new Icon(Icons.navigate_next)
-    //   ) : null
-    // );
   }
 }
