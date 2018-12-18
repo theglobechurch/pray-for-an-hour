@@ -23,6 +23,9 @@ dependencies:
   # Allows Flutter apps to discover network connectivity
   connectivity: ^0.3.2
 
+  # Go ding at the end of a five minute chunk
+  audioplayers: ^0.7.8
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -47,6 +50,7 @@ flutter:
   assets:
     - assets/data/default.json
     - assets/data/dev.json
+    - assets/sound/ding.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

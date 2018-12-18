@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'package:audioplayers/audio_cache.dart';
 import 'package:pray_for_an_hour/services/prayer_services.dart';
 import 'package:pray_for_an_hour/endcard_widget.dart';
 import 'package:pray_for_an_hour/colours.dart';
@@ -15,6 +16,7 @@ class _PrayerScreenState extends State<PrayerScreen> {
   int maxValue = 11;
   var t;
   var _prayerData;
+  static AudioCache player = new AudioCache();
 
   @override
   void initState() {
@@ -46,6 +48,8 @@ class _PrayerScreenState extends State<PrayerScreen> {
 
   _timerComplete() {
     debugPrint('⏰ Timer Complete');
+    const alarmAudioPath = "sound/ding.mp3";
+    player.play(alarmAudioPath);
     setState((){ _moveOn = true; });
   }
 
@@ -72,6 +76,8 @@ class _PrayerScreenState extends State<PrayerScreen> {
             padding: EdgeInsets.only(top: 16.0),
             alignment: Alignment(-1, 0),
           );
+        } else {
+          return CircularProgressIndicator();
         }
       }
     );
@@ -86,6 +92,8 @@ class _PrayerScreenState extends State<PrayerScreen> {
             ),
             padding: EdgeInsets.all(16.0),
           );
+        } else {
+          return CircularProgressIndicator();
         }
       }
     );
