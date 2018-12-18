@@ -1,10 +1,44 @@
 [
   {
-    "name": "‍Pray",
-    "body": "Pray for this time – “free from distractions without and distractions within” Baxter Fear the Lord. Think about who you are coming before – “Our Father in Heaven” Matthew 6:9. “Guard your steps when you go to the house of God. Go near to listen rather than to offer the sacrifice of fools, who do not know that they do wrong. Do not be quick with your mouth, do not be hasty in your heart to utter anything before God. God is in heaven and you are on earth, so let your words be few.” Ecclesiastes 5:1-2. Try being silent before him – “Be still and know that I am God, I will be exalted among the nations, I will be exalted in the earth”. Psalm 46: 10 “The Lord is in his holy temple, let all the earth be silent before him” Habakkuk 2:20. Perhaps use the words of a song to fix your heart on God. Delight that you can spend this time with God – echoing the sentiments of Psalm 84, Psalm 119"
-  },
-  {
-    "name": "Call",
-    "body": "Call out for insight as you open His word. Remember these are God’s words, only he can give understanding, we cannot work it out by our own methods. Take a moment to consider who the passage is written to – God’s people, the nations, a church an individual? Put yourself in their shoes and try to hear it as they would have heard it, how they would have felt as they read it - what might have been surprising, shocking, challenging or encouraging for them. (You may need to look at the start of the Bible book to find who it was written from and to, or look up the book on thebibleproject.com if you are stuck) Read passage out loud and slowly, noticing each word. Write down the shocking things. Note any repetition. What was the main point for those it was written to?"
+    "name": "Prepare",
+    "content": [
+      {
+        "type": "text",
+        "body": "Remember who you are coming before"
+      },
+      {
+        "type": "scripture",
+        "body": "Our Father in Heaven…",
+        "reference": "Matthew 6:9"
+      },
+      {
+        "type": "scripture",
+        "body": "Guard your steps when you go to the house of God. To draw near to listen is better than to offer the sacrifice of fools, for they do not know that they are doing evil. Be not rash with your mouth, nor let your heart be hasty to utter a word before God, for God is in heaven and you are on earth. Therefore let your words be few.",
+        "reference": "Ecclesiastes 5:1-2"
+      },
+      {
+        "type": "text",
+        "body": "Spend some time in silence before God"
+      },
+      {
+        "type": "scripture",
+        "body": "Be still, and know that I am God. I will be exalted among the nations, I will be exalted in the earth!",
+        "reference": "Psalm 46:10"
+      },
+      {
+        "type": "scripture",
+        "body": "…The Lord is in his holy temple; let all the earth keep silence before him.",
+        "reference": "Habakkuk 2:20"
+      },
+      {
+        "type": "text",
+        "body": "Praise God that you can spend this time with him in prayer"
+      },
+      {
+        "type": "scripture",
+        "body": "…since we have confidence to enter the Most Holy Place by the blood of Jesus,  by a new and living way opened for us through the curtain, that is, his body,  and since we have a great priest over the house of God, let us draw near to God with a sincere heart and with the full assurance that faith brings, having our hearts sprinkled to cleanse us from a guilty conscience and having our bodies washed with pure water.",
+        "reference": "Hebrews 10:19–22"
+      }
+    ]
   }
 ]

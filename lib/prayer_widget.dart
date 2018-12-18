@@ -56,6 +56,19 @@ class _PrayerScreenState extends State<PrayerScreen> {
   @override
   Widget build(BuildContext context) {
 
+    Widget scripture(passage) {
+      return Column(
+        children:[
+          Text(passage.body),
+          Text(passage.reference),
+        ]
+      );
+    }
+
+    Widget prayerLine(line) {
+      return Text(line);
+    }
+
     Widget title = FutureBuilder<dynamic>(
       future: _prayerData,
       builder: (context, snapshot) {
@@ -87,9 +100,7 @@ class _PrayerScreenState extends State<PrayerScreen> {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           return Container(
-            child: Text(
-              snapshot.data.prayers[_i].body
-            ),
+            child: (snapshot.data.prayers[_i].prayerContents[0].type == 'scripture') ? scripture(snapshot.data.prayers[_i].prayerContents[1]) : prayerLine(snapshot.data.prayers[_i].prayerContents[0].body),
             padding: EdgeInsets.all(16.0),
           );
         } else {
@@ -97,6 +108,8 @@ class _PrayerScreenState extends State<PrayerScreen> {
         }
       }
     );
+
+
 
     Widget btnAdvance = FloatingActionButton(
       onPressed: !_moveOn ? null : () {
