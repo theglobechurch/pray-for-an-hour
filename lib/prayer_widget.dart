@@ -69,47 +69,34 @@ class _PrayerScreenState extends State<PrayerScreen> {
       return Text(line);
     }
 
-    Widget title = FutureBuilder<dynamic>(
-      future: _prayerData,
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return Container(
-            child: Container (
-              child: Text(
-                snapshot.data.prayers[_i].name,
-                style: TextStyle(
-                  fontSize: 32.0,
-                  fontWeight: FontWeight.w800,
-                  color: kSurface,
-                ),
-              ),
-              color: kPrimaryBlue,
-              padding: EdgeInsets.fromLTRB(16.0, 2.0, 8.0, 2.0),
+    Widget prayerTitle(title) {
+      return Container(
+        child: Container (
+          child: Text(
+            title,
+            style: TextStyle(
+              fontSize: 32.0,
+              fontWeight: FontWeight.w800,
+              color: kSurface,
             ),
-            padding: EdgeInsets.only(top: 16.0),
-            alignment: Alignment(-1, 0),
-          );
+          ),
+          color: kPrimaryBlue,
+          padding: EdgeInsets.fromLTRB(16.0, 2.0, 8.0, 2.0),
+        ),
+        padding: EdgeInsets.only(top: 16.0),
+        alignment: Alignment(-1, 0),
+      ); 
+    }
+
+    Widget prayerBody(List contents) {
+      return new Column(children: contents.map((i){
+        if (i.type == 'scripture'){
+          return scripture(i);
         } else {
-          return CircularProgressIndicator();
+          return prayerLine(i.body);
         }
-      }
-    );
-
-    Widget body = FutureBuilder<dynamic>(
-      future: _prayerData,
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return Container(
-            child: (snapshot.data.prayers[_i].prayerContents[0].type == 'scripture') ? scripture(snapshot.data.prayers[_i].prayerContents[1]) : prayerLine(snapshot.data.prayers[_i].prayerContents[0].body),
-            padding: EdgeInsets.all(16.0),
-          );
-        } else {
-          return CircularProgressIndicator();
-        }
-      }
-    );
-
-
+      }).toList());
+    }
 
     Widget btnAdvance = FloatingActionButton(
       onPressed: !_moveOn ? null : () {
@@ -125,32 +112,34 @@ class _PrayerScreenState extends State<PrayerScreen> {
       child: new Icon(Icons.navigate_next)
     );
 
-    Widget loadedBody = Container(
-      child: Container (
-        child: Column(
-          children:[
-            title,
-            body
-          ]
-        ),
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: kPrimaryBlue,
-            width: 16.0,
+    Widget prayerItemBody(data) {
+      return Container(
+        child: Container (
+          child: Column(
+            children:[
+              prayerTitle(data.name),
+              prayerBody(data.prayerContents)
+            ]
           ),
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: kPrimaryBlue,
+              width: 16.0,
+            ),
+          ),
+          alignment: Alignment(0, 0),
         ),
+        padding: EdgeInsets.all(32.0),
         alignment: Alignment(0, 0),
-      ),
-      padding: EdgeInsets.all(32.0),
-      alignment: Alignment(0, 0),
-    );
+      );
+    }
 
     return FutureBuilder<dynamic>(
       future: _prayerData,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           return Scaffold(
-            body: loadedBody,
+            body: prayerItemBody(snapshot.data.prayers[_i]),
             floatingActionButton: _moveOn ? btnAdvance : null
           );
         } else {
