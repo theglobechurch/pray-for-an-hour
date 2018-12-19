@@ -42,7 +42,7 @@ class _PrayerScreenState extends State<PrayerScreen> {
   }
 
   _countdown() {
-    t = new Timer(Duration(seconds: 2), (){
+    t = new Timer(Duration(minutes: 5), (){
       _timerComplete();
     });
   }

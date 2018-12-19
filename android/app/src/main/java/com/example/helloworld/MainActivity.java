@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package com.theglobechurch.prayforanhour;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
