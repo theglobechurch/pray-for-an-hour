@@ -8,8 +8,6 @@ class PrayersList {
   factory PrayersList.fromJson(List<dynamic> parsedJson) {
     List<Prayer> prayers = new List<Prayer>();
     prayers = parsedJson.map((i)=>Prayer.fromJson(i)).toList();
-    print(prayers);
-
     return new PrayersList(
       prayers: prayers,
     );
@@ -26,7 +24,6 @@ class Prayer {
   });
 
   factory Prayer.fromJson(Map<String, dynamic> parsedJson) {
-
     var list = parsedJson['content'] as List;
     List<PrayerContent> contentList = list.map((i) => PrayerContent.fromJson(i)).toList();
 
@@ -47,7 +44,6 @@ class PrayerContent {
     this.body,
     this.reference
   });
-
 
   factory PrayerContent.fromJson(Map<String, dynamic> parsedJson) {
     return new PrayerContent(

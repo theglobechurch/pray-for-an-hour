@@ -95,25 +95,27 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       body: Center(
-        child: Container(
-          child: Container (
-            child: Column(
-              children:[
-                headerSection,
-                startSection,
-              ],
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            ),
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: kPrimaryBlue,
-                width: 16.0,
+        child: new SafeArea(
+          child: Container(
+            child: Container (
+              child: Column(
+                children:[
+                  headerSection,
+                  startSection,
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
               ),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: kPrimaryBlue,
+                  width: 16.0,
+                ),
+              ),
+              alignment: Alignment(0, 0),
             ),
+            padding: EdgeInsets.all(32.0),
             alignment: Alignment(0, 0),
           ),
-          padding: EdgeInsets.all(32.0),
-          alignment: Alignment(0, 0),
         ),
       ),
     );

@@ -159,27 +159,29 @@ class _PrayerScreenState extends State<PrayerScreen> {
     );
 
     Widget prayerItemBody(data) {
-      return Container(
-        child: Container (
-          child: SingleChildScrollView(
-            primary: true,
-            child: Column(
-                children: [
-                  prayerTitle(data.name),
-                  prayerBody(data.prayerContents)
-                ]
-              ),
-          ),
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: kPrimaryBlue,
-              width: 16.0,
+      return SafeArea(
+        child: Container(
+          child: Container (
+            child: SingleChildScrollView(
+              primary: true,
+              child: Column(
+                  children: [
+                    prayerTitle(data.name),
+                    prayerBody(data.prayerContents)
+                  ]
+                ),
             ),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: kPrimaryBlue,
+                width: 16.0,
+              ),
+            ),
+            alignment: Alignment(0, 0),
           ),
+          padding: EdgeInsets.all(32.0),
           alignment: Alignment(0, 0),
         ),
-        padding: EdgeInsets.all(32.0),
-        alignment: Alignment(0, 0),
       );
     }
 

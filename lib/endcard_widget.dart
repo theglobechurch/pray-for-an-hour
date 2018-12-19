@@ -49,26 +49,28 @@ class EndCardScreen extends StatelessWidget {
     );
 
     return Scaffold(
-      body: Container(
-        child: Container (
-          child: Column(
-            children:[
-              encourager,
-              btnRestart
-            ],
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          ),
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: kPrimaryBlue,
-              width: 16.0,
+      body: SafeArea(
+        child: Container(
+          child: Container (
+            child: Column(
+              children:[
+                encourager,
+                btnRestart
+              ],
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
             ),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: kPrimaryBlue,
+                width: 16.0,
+              ),
+            ),
+            alignment: Alignment(0, 0),
           ),
+          padding: EdgeInsets.all(32.0),
           alignment: Alignment(0, 0),
         ),
-        padding: EdgeInsets.all(32.0),
-        alignment: Alignment(0, 0),
-      ),
+      )
     );
   }
 }
