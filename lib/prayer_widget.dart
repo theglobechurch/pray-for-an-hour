@@ -161,11 +161,14 @@ class _PrayerScreenState extends State<PrayerScreen> {
     Widget prayerItemBody(data) {
       return Container(
         child: Container (
-          child: Column(
-            children: [
-              prayerTitle(data.name),
-              prayerBody(data.prayerContents)
-            ]
+          child: SingleChildScrollView(
+            primary: true,
+            child: Column(
+                children: [
+                  prayerTitle(data.name),
+                  prayerBody(data.prayerContents)
+                ]
+              ),
           ),
           decoration: BoxDecoration(
             border: Border.all(
