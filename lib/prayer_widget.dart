@@ -4,6 +4,7 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:pray_for_an_hour/services/prayer_services.dart';
 import 'package:pray_for_an_hour/endcard_widget.dart';
 import 'package:pray_for_an_hour/colours.dart';
+import 'package:pray_for_an_hour/widgets/column_spacer.dart';
 
 class PrayerScreen extends StatefulWidget {
   @override
@@ -57,23 +58,62 @@ class _PrayerScreenState extends State<PrayerScreen> {
   Widget build(BuildContext context) {
 
     Widget scripture(passage) {
-      return Column(
-        children:[
-          Text(passage.body),
-          Text(passage.reference),
-        ]
+      return Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:[
+            Text(
+              passage.body,
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.w400,
+                fontStyle: FontStyle.italic,
+                color: kPrimaryBlue,
+              ),
+            ),
+            Text(
+              passage.reference,
+              style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.w400,
+                height: 1.5,
+                color: kPrimaryBlue,
+              ),
+            ),
+          ],
+        ),
+        alignment: Alignment(-1, 0),
+        padding: EdgeInsets.fromLTRB(16.0, 0, 0, 0),
+        decoration: new BoxDecoration(
+          border: new Border(
+            left: BorderSide(
+              width: 8.0,
+              color: kWhite
+            )
+          ),
+        ),
       );
     }
 
     Widget prayerLine(line) {
-      return Text(line);
+      return Container(
+        child: Text(
+          line,
+          style: TextStyle(
+            fontSize: 24.0,
+            fontWeight: FontWeight.w400,
+            color: kPrimaryBlue,
+          ),
+        ),
+        alignment: Alignment(-1, 0),
+      );
     }
 
     Widget prayerTitle(title) {
       return Container(
         child: Container (
           child: Text(
-            title,
+            title.toUpperCase(),
             style: TextStyle(
               fontSize: 32.0,
               fontWeight: FontWeight.w800,
@@ -89,13 +129,19 @@ class _PrayerScreenState extends State<PrayerScreen> {
     }
 
     Widget prayerBody(List contents) {
-      return new Column(children: contents.map((i){
-        if (i.type == 'scripture'){
-          return scripture(i);
-        } else {
-          return prayerLine(i.body);
-        }
-      }).toList());
+      return new Container(
+        child: ColumnSpacer(
+          spacing: 16.0,
+          children: contents.map((i){
+            if (i.type == 'scripture'){
+              return scripture(i);
+            } else {
+              return prayerLine(i.body);
+            }
+          }).toList()
+        ),
+        padding: EdgeInsets.all(16.0),
+      );
     }
 
     Widget btnAdvance = FloatingActionButton(
@@ -116,7 +162,7 @@ class _PrayerScreenState extends State<PrayerScreen> {
       return Container(
         child: Container (
           child: Column(
-            children:[
+            children: [
               prayerTitle(data.name),
               prayerBody(data.prayerContents)
             ]

@@ -142,7 +142,7 @@ TextTheme _buildTextTheme(TextTheme base, Color color) {
       title: base.title.copyWith(fontSize: 18.0),
       caption: base.caption.copyWith(
         fontWeight: FontWeight.w400,
-        fontSize: 14.0,
+        fontSize: 12.0,
       )
       .apply(
         color: color,
