@@ -1,50 +1,302 @@
 [
   {
-    "name": "Turn",
-    "body": "Pray for this time – “free from distractions without and distractions within” Baxter Fear the Lord. Think about who you are coming before – “Our Father in Heaven” Matthew 6:9. “Guard your steps when you go to the house of God. Go near to listen rather than to offer the sacrifice of fools, who do not know that they do wrong. Do not be quick with your mouth, do not be hasty in your heart to utter anything before God. God is in heaven and you are on earth, so let your words be few.” Ecclesiastes 5:1-2. Try being silent before him – “Be still and know that I am God, I will be exalted among the nations, I will be exalted in the earth”. Psalm 46: 10 “The Lord is in his holy temple, let all the earth be silent before him” Habakkuk 2:20. Perhaps use the words of a song to fix your heart on God. Delight that you can spend this time with God – echoing the sentiments of Psalm 84, Psalm 119"
+    "name": "Prepare",
+    "content": [
+      {
+        "type": "text",
+        "body": "Remember who you are coming before"
+      },
+      {
+        "type": "scripture",
+        "body": "Our Father in Heaven…",
+        "reference": "Matthew 6:9"
+      },
+      {
+        "type": "scripture",
+        "body": "Guard your steps when you go to the house of God. To draw near to listen is better than to offer the sacrifice of fools, for they do not know that they are doing evil. Be not rash with your mouth, nor let your heart be hasty to utter a word before God, for God is in heaven and you are on earth. Therefore let your words be few.",
+        "reference": "Ecclesiastes 5:1-2"
+      },
+      {
+        "type": "text",
+        "body": "Spend some time in silence before God"
+      },
+      {
+        "type": "scripture",
+        "body": "Be still, and know that I am God. I will be exalted among the nations, I will be exalted in the earth!",
+        "reference": "Psalm 46:10"
+      },
+      {
+        "type": "scripture",
+        "body": "…The Lord is in his holy temple; let all the earth keep silence before him.",
+        "reference": "Habakkuk 2:20"
+      },
+      {
+        "type": "text",
+        "body": "Praise God that you can spend this time with him in prayer"
+      },
+      {
+        "type": "scripture",
+        "body": "…since we have confidence to enter the Most Holy Place by the blood of Jesus,  by a new and living way opened for us through the curtain, that is, his body,  and since we have a great priest over the house of God, let us draw near to God with a sincere heart and with the full assurance that faith brings, having our hearts sprinkled to cleanse us from a guilty conscience and having our bodies washed with pure water.",
+        "reference": "Hebrews 10:19–22"
+      }
+    ]
   },
   {
-    "name": "Call out",
-    "body": "Call out for insight as you open His word. Remember these are God’s words, only he can give understanding, we cannot work it out by our own methods. Take a moment to consider who the passage is written to – God’s people, the nations, a church an individual? Put yourself in their shoes and try to hear it as they would have heard it, how they would have felt as they read it - what might have been surprising, shocking, challenging or encouraging for them. (You may need to look at the start of the Bible book to find who it was written from and to, or look up the book on thebibleproject.com if you are stuck) Read passage out loud and slowly, noticing each word. Write down the shocking things. Note any repetition. What was the main point for those it was written to?"
+    "name": "Open God’s Word",
+    "content": [
+      {
+        "type": "text",
+        "body": "Pray for insight as you open his word."
+      },
+      {
+        "type": "scripture",
+        "body": "Your word is a lamp to my feet and a light to my path.",
+        "reference": "Psalm 119:105"
+      },
+      {
+        "type": "text",
+        "body": "Remember these are God’s words, only he can give understanding, we cannot work it out by our own methods."
+      },
+      {
+        "type": "text",
+        "body": "Take a moment to consider who the passage is written to – God’s people, the nations, a church an individual?"
+      },
+      {
+        "type": "text",
+        "body": "Put yourself in their shoes and try to hear it as they would have heard it, how they would have felt as they read it - what might have been surprising, shocking, challenging or encouraging for them."
+      },
+      {
+        "type": "text",
+        "body": "Read passage out loud and slowly, noticing each word."
+      },
+      {
+        "type": "text",
+        "body": "Write down the surprising things."
+      },
+      {
+        "type": "text",
+        "body": "Note any repetition."
+      },
+      {
+        "type": "text",
+        "body": "What was the main point for those it was written to?"
+      }
+    ]
   },
   {
-    "name": "Insight",
-    "body": "Look at the passage through three lenses: God, Jesus, Us. What do we learn about God? How do we glimpse Jesus’ death/resurrection? “Did not the Messiah have to suffer these things and then enter his glory? And beginning with Moses and all the prophets he explained to them what was said in all the Scriptures concerning himself.” Luke 24:26-27 What difference would it have made to the first hearers – and therefore to us?"
+    "name": "Meditate",
+    "content": [
+      {
+        "type": "text",
+        "body": "Take some time to pray through the passage you have just read."
+      },
+      {
+        "type": "scripture",
+        "body": "I will meditate on your precepts and fix my eyes on your ways.",
+        "reference": "Psalm 119:15"
+      },
+      {
+        "type": "text",
+        "body": "How does the passage you have just read connect with your life?"
+      },
+      {
+        "type": "text",
+        "body": "What did you learn about God? About Jesus? About yourself? Pray that God would root these truths in your heart."
+      },
+      {
+        "type": "text",
+        "body": "Ask God to change you into someone more like Jesus through his word."
+      }
+    ]
   },
   {
-    "name": "Store up",
-    "body": "Store up this truth within you. Pick one truth that challenges you - write out and try to memorise the verse in which it is most clearly expressed. Hallow his name: Consider how God displays it perfectly, where you see evidence of this elsewhere in Scripture. "
+    "name": "Confession",
+    "content": [
+      {
+        "type": "text",
+        "body": "Probe how you have not believed or obeyed this truth."
+      },
+      {
+        "type": "scripture",
+        "body": "If we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.",
+        "reference": "1 John 1:9"
+      },
+      {
+        "type": "text",
+        "body": "Consider your ways"
+      },
+      {
+        "type": "text",
+        "body": "Ask God to show you specific ways in which you haven't lived this out"
+      },
+      {
+        "type": "text",
+        "body": "Say them out load or write them down"
+      },
+      {
+        "type": "text",
+        "body": "Dig deeper; why have you struggled with this?"
+      },
+      {
+        "type": "text",
+        "body": "Bring these things to God, ask for forgiveness for them."
+      }
+    ]
   },
   {
-    "name": "Treasure",
-    "body": "Treasure this truth. Long for his kingdom to come and his will be done: Think of its opposite and thank God that he upholds truth. Think about whether it is acknowledged in this world, and upheld, mourn for where it is not. Think about how it will be perfect in heaven."
+    "name": "Watch",
+    "content": [
+      {
+        "type": "text",
+        "body": "Pray about the dangers and temptations that you face"
+      }
+    ]
   },
   {
-    "name": "Confess",
-    "body": "Confess - probe how you have not believed or obeyed this truth. Consider your ways. Ask God to show you specific ways in which you have not lived this out. Say them out loud or write them down. Dig deeper. Why don’t you believe this? Is it because of a specific person, or pressure, or experience? Think of someone you could talk to about this."
-  },
-  {
-    "name": "Look at Jesus",
-    "body": "Look at Jesus - consider how Jesus perfectly obeyed and upheld this truth. Think about the Father laying your sin upon his son. Imagine him suffering on the cross for this sin, in your place. Hear him cry out ‘my God why have you abandoned me?’ Imagine the darkness that the world was plunged into as he endured the cross. For you. Feel the shame that your sin put him there. Recognise the seriousness of your sin. Hear those amazing words, “it is finished”. Feel the warmth of the sun as it rises and imagine the joy of Mary as she sees Jesus risen from the dead and cries out “Teacher!” Hear the words “you are washed, you are sanctified, you are justified in the name of the Lord Jesus Christ and by the Spirit of our God.” (1 Cor 6:11). Imagine yourself spotless, clean, new. The sin is gone, the punishment paid, today is a new day for you to live out this forgiveness. Do you really believe this is true? You are not guilty anymore. You could use a song to help your respond."
-  },
-  {
-    "name": "Change",
-    "body": "Accept God’s word and live it out - go back over the Bible verse you wrote out earlier and ask God to fill you with his Spirit to enjoy this truth and love to overflow it in your life. Ask God to show you what small step you can take to put this into practice. Maybe write out the verse and set it as your wallpaper so you can look at it when tempted and pray for strength to do it. Or write it on an elastic band and put it onto your wrist. Every time you sin, swap wrists, ask for forgiveness and help to start afresh. Fight from the position of forgiveness, not guilt. Think through your day and ask God to protect you from temptation, and deliver you from the evil one. Ask for his help to remember this truth in the different places you will be and the different people you will interact with. Identify areas that will be tough, maybe ask a friend to pray for you in this. "
-  },
-  {
-    "name": "Pray",
-    "body": "Pray this truth for your family, friends and church (try praying through your phone contacts if you don’t have a list). Maybe you could share what you have learned? Make a note of anyone God prompts you about. Wait until you have finished before actioning!"
-  },
-  {
-    "name": "Connect",
-    "body": "How would you explain this to someone who doesn’t believe? Plan a conversation starter. Pray for unbelievers in your life, especially for opportunities you know are coming up. Ask God to lead you to share this truth with one of them. "
-  },
-  {
-    "name": "World",
-    "body": "How could you use this truth to pray for the world? Pick a particular country or missionaries you know. You could message them afterwards to encourage them."
+    "name": "People",
+    "content": [
+      {
+        "type": "text",
+        "body": "Pray for your family, your friends, your church."
+      },
+      {
+        "type": "text",
+        "body": "Take the words of the passage that you have just been reading and pray it for them."
+      }
+    ]
   },
   {
     "name": "Worship",
-    "body": "“Then you will understand the fear of the Lord and find the knowledge of God. For the Lord gives wisdom and from his mouth come knowledge and understanding.” Finish by worshipping God for this truth, perhaps using the words of a hymn."
+    "content": [
+      {
+        "type": "text",
+        "body": "Use the words of a Psalm or a song of worship to help you praise God"
+      }
+    ]
+  },
+  {
+    "name": "Thanksgiving",
+    "content": [
+      {
+        "type": "text",
+        "body": "On a piece of paper make a list of the things that you are thankful for today."
+      },
+      {
+        "type": "scripture",
+        "body": "Give thanks in all circumstances; for this is the will of God in Christ Jesus for you.",
+        "reference": "1 Thessalonians 5:18"
+      },
+      {
+        "type": "text",
+        "body": "Think about the people that God has put in your life."
+      },
+      {
+        "type": "text",
+        "body": "Consider what God has been teaching you recently."
+      },
+      {
+        "type": "text",
+        "body": "Spend some time thinking about God’s character and who he is."
+      },
+      {
+        "type": "text",
+        "body": "Bring these things to God in praise and thankfulness."
+      }
+    ]
+  },
+  {
+    "name": "Thanksgiving",
+    "content": [
+      {
+        "type": "text",
+        "body": "Pray through what has already happened in your week and what is coming up."
+      },
+      {
+        "type": "text",
+        "body": "Think about the people that God has brought into your week, and those who you will be meeting."
+      },
+      {
+        "type": "text",
+        "body": "How does what you read earlier help shape your prayers?"
+      }
+    ]
+  },
+  {
+    "name": "Your area",
+    "content": [
+      {
+        "type": "text",
+        "body": "Pray for the location that God has place in you in."
+      },
+      {
+        "type": "scripture",
+        "body": "…seek the welfare of the city where I have sent you into exile, and pray to the LORD on its behalf, for in its welfare you will find your welfare",
+        "reference": "Jeremiah 29:7"
+      },
+      {
+        "type": "text",
+        "body": "What are the needs of your town/city? Bring these things to God."
+      },
+      {
+        "type": "text",
+        "body": "Pray for your local church, and it’s leaders, pray for your church family as it seeks to share the message of the gospel."
+      },
+      {
+        "type": "scripture",
+        "body": "Put on then, as God's chosen ones, holy and beloved, compassionate hearts, kindness, humility, meekness, and patience",
+        "reference": "Colossians 3:12"
+      },
+      {
+        "type": "text",
+        "body": "Pray that God would increase your love for the place where he has put you; that you would have a deeper love and compassion for the people around you."
+      }
+    ]
+  },
+  {
+    "name": "The World",
+    "content": [
+      {
+        "type": "text",
+        "body": "How could you use this truth to pray for the world?"
+      },
+      {
+        "type": "text",
+        "body": "We are part of a global church"
+      },
+      {
+        "type": "text",
+        "body": "Pick a particular country or missionaries you know and pray for them now."
+      },
+      {
+        "type": "text",
+        "body": "Pray for the needs of the country, pray that God’s will be done, on earth as it is in heaven."
+      }
+    ]
+  },
+  {
+    "name": "Praise",
+    "content": [
+      {
+        "type": "text",
+        "body": "End your time as you started- coming before God in praise"
+      },
+      {
+        "type": "scripture",
+        "body": "Then you will understand the fear of the Lord and find the knowledge of God. For the Lord gives wisdom; from his mouth come knowledge and understanding…",
+        "reference": "Proverbs 2:5–6"
+      },
+      {
+        "type": "text",
+        "body": "Reflect on the passage that you read earlier."
+      },
+      {
+        "type": "text",
+        "body": "Praise God for his word and ask that he would plant his truth deep in you."
+      },
+      {
+        "type": "text",
+        "body": "Thank God for the privilege it is to come before him in prayer."
+      }
+    ]
   }
 ]
